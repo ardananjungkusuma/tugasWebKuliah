@@ -1,0 +1,18 @@
+body{
+    background-image: url(/tugasWebKuliah/aboutMe/img/bg.png);
+}
+
+.shape{
+    background: #553D67;
+    width: 400px;
+    height: 600px;
+    opacity: .80;
+    border-radius: 3%;
+    margin-left: auto;
+    margin-top: 70px;
+    margin-right: auto;
+}
+
+.shape:hover{
+    background: whitesmoke;
+}
