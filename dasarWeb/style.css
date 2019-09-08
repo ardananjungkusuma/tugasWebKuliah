@@ -2,3 +2,29 @@ textarea{
     width: 300px;
     height: 50px;
 }
+h2{
+    color: orange;
+    font-family: 'Trebuchet MS';
+    text-align: center;    
+}
+
+.kotak{
+    color: white;
+    background-color: orange;
+    margin: 10px;
+    padding: 50px;
+    width: 100px;
+}
+
+#kotak{
+    width: 400px;
+    color: white;
+    background: blue;
+    padding: 50px;
+    
+}
+
+body{
+    background: lightcyan;
+    color: white;
+}
