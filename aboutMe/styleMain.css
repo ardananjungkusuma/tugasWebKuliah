@@ -1,6 +1,9 @@
+.tes{
+  color: blue;
+}
 .wrap{
   background: blue;
-  width: 900px;
+  width: 1200px;
   margin: 10px auto;
 }
 
@@ -30,18 +33,18 @@
   clear: both;
 }
 
-.badan{
+.body{
   height: 450px;
 }
 
-.wrap .badan .sidebar{
+.wrap .body .sidebar{
   background: orange;
   float: left;
   width: 25%;
   height: 100%;
 }
 
-.wrap .badan .content{
+.wrap .body .content{
   background: red;
   float: left;
   height: 100%;
