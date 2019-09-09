@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+.content{
+    width: 900px;
+    height: 150px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+}
+
+#avatar{
+    border: 3px dashed white;
+    width: 250px;
+    height: 350px;
+}
+
+.keepInTouch{
+    color: white;
+}
