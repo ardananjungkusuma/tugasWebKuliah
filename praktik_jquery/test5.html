@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="styleSlide.css" />
         <script type="text/javascript" src="jquery-3.4.1.js"></script>
         <script>
             $(document).ready(function(){
-                $("#button1").click(function(){
-                    alert("Ini Praktikum Minggu Ke 4");
+                $("#flip").click(function(){
+                    $("#kotak2").slideToggle("slow");
                 });
             });
         </script>
     </head>
     <body>
-        <input type="button" id="button1" value="Klik Saya"/>
+        <div id="flip">Klik untuk efek slide</div>
+        <div id="kotak2">Selamat Pagi</div>
     </body>
 </html>

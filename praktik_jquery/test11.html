@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styleSlideShow.css" />
+        <script type="text/javascript" src="jquery-3.4.1.js"></script>
+        <script>
+            var i=0;
+            $(document).ready(function(){
+                $('.slidertitle, #slider img').hide();
+                showNextImage();
+                setInterval('showNextImage()',3000);
+            });
+
+            function showNextImage(){
+                i++;
+                $('#sliderImage'+i).appendTo('#slider').fadeIn(1100).fadeOut(1100);
+                $('#title'+i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+                if(i==3){
+                    i==0;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="slider">
+            <img id="sliderImage1" src="assets/0025740_fresh_fruit_cake_385.jpeg">
+            <div class="slidertitle" id="title1">Gambar1</div>
+
+            <img id="sliderImage2" src="assets/0027846_choco_valvette_cake_385.jpeg">
+            <div class="slidertitle" id="title2">Gambar2</div>
+
+            <img id="sliderImage3" src="assets/0027848_carmell_chocolate_cake_385.jpeg">
+            <div class="slidertitle" id="title3">Gambar3</div>
+        </div>
+    </body>
+</html>
