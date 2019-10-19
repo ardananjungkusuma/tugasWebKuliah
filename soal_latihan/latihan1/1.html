@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <title>Website Soal 1</title>
+        <script>
+            $(function(){
+                $("datepick").datepicker();
+            })
+        </script>
+    </head>
+    <body>
+        <form method="POST" action="1.php">
+
+            <b>Select Category</b><br>
+            <input type="radio" name="catService" value="VIP">VIP<br>
+            <input type="radio" name="catService" value="Premium">Premium<br>
+            <input type="radio" name="catService" value="Basic">Basic<br><br>
+            <b>Select</b><br>
+            <input type="checkbox" name="catEat[]" value="Breakfast">Breakfast<br>
+            <input type="checkbox" name="catEat[]" value="Lunch">Lunch<br>
+            <input type="checkbox" name="catEat[]" value="Dinner">Dinner<br><br>
+            Date : <input type="date" name="datepick"><br><br>
+            Name : <input type="text" placeholder="Ardan Anjung" name="nama"><br><br>
+            Phone : <input type="text" placeholder="+6285258967800" name="phone_number"><br><br>
+            <textarea placeholder="Message : " style="height: 40px;" name="message"></textarea><br><br>
+            Send Email To : <input type="text" placeholder="ardananjungkusuma@gmail.com" name="email"><br><br>
+            <button type="submit" value="Kirim">Kirim</button>
+            <button type="reset"value="Reset">Reset</button>
+
+        </form>
+    </body>
+</html>
