@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Kusuma PetCare</title>
+        <link rel="stylesheet" type="text/css" href="styleKusumaPetCare.css">
+        <script type="text/javascript" src="jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                //adding rows
+                $(".add-row").click(function(){
+                    var num = $("#num").val();
+                    var itemCategory = $("#itemCategory").val();
+                    var itemMerk = $("#itemMerk").val();
+                    var unitPrice = $("#unitPrice").val();
+                    var buyQty = $("#buyQty").val();
+                    var totalPrice = 0;
+                    var totalPrice = unitPrice * buyQty;
+                    var markup = "<tr><td><input type='checkbox' name = 'record'></td><td>"+num+"</td><td>"+itemCategory+"</td><td>"+itemMerk+"</td><td>"+unitPrice+"</td><td>"+buyQty+"</td><td>"+totalPrice+"</td></tr>";
+                    $("table tbody").append(markup);
+                });
+
+                //deleting selected rows
+                $(".delete-row").click(function(){
+                    $("table tbody").find('input[name="record"]').each(function(){
+                        if($(this).is(":checked")){
+                            $(this).parents("tr").remove();
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="addItem">
+            <center>
+                <form><input type="number" id="num" placeholder="1">
+                <input type="text" id="itemCategory" placeholder="Clothes">
+                <input type="text" id="itemMerk" placeholder="Cardinal">
+                <input type="number" id="unitPrice" placeholder="120000">
+                <input type="number" id="buyQty" placeholder="3">
+                <input type="button" class="add-row" value="Add Row">
+                <button type="button" class="delete-row" value="Delete Row">Delete</button>
+                </form>
+            </center>
+        </div>
+        <div id="tableListItem">
+            <center>
+                <table id="indexTable">
+                    <thead>
+                        <tr>
+                            <td>Select</td>
+                            <td>No</td>
+                            <td>Jenis Barang</td>
+                            <td>Nama Barang</td>
+                            <td>Harga Satuan</td>
+                            <td>Jumlah Beli</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="record"></td>
+                            <td>1</td>
+                            <td>Baju</td>
+                            <td>Cardinal</td>
+                            <td>150000</td>
+                            <td>2</td>
+                            <td>300000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </center>
+        </div>       
+        <div id="summaries">
+            
+        </div>     
+    </body>
+</html>

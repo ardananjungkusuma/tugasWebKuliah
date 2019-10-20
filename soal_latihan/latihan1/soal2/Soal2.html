@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOAL 2</title>
+    <link rel="stylesheet" type="text/css" href="UTS2.css">
+    <script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+    <h2><font color="blue">Abdurrasyid Muhasibi</font></h2>
+    <p><font size = 5><strong>Input Barang</strong></font></p>
+    <form>
+        <input type="text" id="jenis_barang" placeholder="Jenis Barang">
+        <input type="text" id="nama_barang" placeholder="Nama Barang">
+        <input type="number" id="harga_satuan" placeholder="Harga Satuan">
+        <input type="number" id="jumlah_beli" placeholder="Jumlah Beli">
+        <input type="button" class="add-row" value="Tambahkan Barang">
+    </form>
+    <hr>
+    <p><font size = 5><strong>Form Pembelian</strong></font></p>
+    
+    <table class="data" border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Jenis Barang</th>
+                <th>Nama Barang</th>
+                <th>Harga Satuan</th>
+                <th>Jumlah Beli</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table><hr>
+    
+    <table>
+        <tr>
+            <td>Sub Total</td>
+            <td id="sub_total">: </td>
+        </tr>
+        <tr>
+            <td>Diskon</td>
+            <td id="diskon">: </td>
+        </tr>
+        <tr>
+            <td>Grand Total</td>
+            <td id="grand_total">: </td>
+        </tr>
+        <tr>
+            <td>Bayar</td>
+            <td>: <input type="number" id="bayar"></td>
+        </tr>
+    </table>
+    
+    <input type="submit" value="Submit" id="submit">
+    <button onclick="window.location.href='Soal2.html'">Batal</button>
+    
+    <script>
+        $(document).ready(function(){
+            var jenis_barang, nama_barang, harga_satuan, jumlah_beli, total, sum = 0, sub_total = 0, diskon = 0, grand_total = 0, bayar = 0;
+            //menambahkan barang
+            $(".add-row").click(function(){
+                jenis_barang = $("#jenis_barang").val();
+                nama_barang = $("#nama_barang").val();
+                harga_satuan = $("#harga_satuan").val();
+                jumlah_beli = $("#jumlah_beli").val();
+                total = harga_satuan * jumlah_beli;
+                //menghitung sub total
+                sum += total;
+                $("#sub_total").text(": " + sum);
+                //menampilkan diskon
+                if(sum >= 640000){
+                    diskon = 1 - 0.35;
+                    $("#diskon").text(": 35%");
+                } else if(sum >= 439000){
+                    diskon = 1 - 0.21;
+                    $("#diskon").text(": 21%")
+                } else if(sum >= 252000){
+                    diskon = 1 - 0.11;
+                    $("#diskon").text(": 11%")
+                } else {
+                    diskon = 1
+                    $("#diskon").text(": -");
+                }
+                //menampilkan grand total
+                if(diskon != 0){
+                    grand_total = sum * diskon;
+                    $("#grand_total").text(": " + grand_total);
+                }
+                var markup = "<tr><td>" + "</td><td>" + jenis_barang + "</td><td>" + nama_barang + "</td><td>" + harga_satuan + "</td><td>" + jumlah_beli + "</td><td>" + total + "</td><tr>"
+                    $(".data tbody").append(markup);
+                });
+                $("#submit").click(function(){
+                    bayar = $("#bayar").val();
+                    if(bayar>=grand_total){
+                        alert("Uang kembalian: " + (bayar-grand_total));
+                        alert("Terima Kasih sudah berbelanja di toko Kami");
+                    } else {
+                        alert("Maaf uang Anda tidak mencukupi!");
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>

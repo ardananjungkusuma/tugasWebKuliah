@@ -1,0 +1,16 @@
+#addItem{
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    position: -webkit-sticky;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr,td{
+    border: 1px solid black;
+    width: 150px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
