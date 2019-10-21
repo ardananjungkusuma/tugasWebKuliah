@@ -6,17 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <script src="assets/js/bootstrap.bundle.js"></script>
-        <style>
-            .imgMe {
-                height: 300px;
-                background: #aaa;
-            }
         </style>
     </head>
-    <body>
+    <body background="img/bg.jpg" style="color: white;">
         <header>
             <nav id="webMaps" class="navbar-dark bg-dark" style="padding-left:16px;">
-                <a href="ardananjungkusuma.blogspot.com" target="_blank" class="navbar-brand">
+                <a href="https://ardananjungkusuma.github.io/" target="_blank" class="navbar-brand">
                     <img src="img/group.png" alt="logo" width="30px" height="30px"> UTS Ardan
                 </a>
             </nav>
@@ -40,6 +35,7 @@
             <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
                 <div class="row">
                     <div class="col-lg-12">
+                        <center><h2>Order Service Form</h2></center><br><br>
                         <form method="POST" action="res1.php">
                             Firstname : <input type="text" placeholder="Ardan" name="namaAwal" required>
                             Lastname  : <input type="text" placeholder="Anjung Kusuma" name="namaAkhir" required><br><hr>
@@ -52,8 +48,8 @@
                             Phone : <input type="number" placeholder="6285258967800" name="phone_number" required><br><br>
                             Date : <input type="date" name="datepick" required><br><br><hr>
                             <textarea placeholder="Message : " style="height: 40px;" name="message"></textarea><br><br>
-                            <button type="submit" value="Kirim">Show Result</button>
-                            <button type="reset"value="Reset">Reset Fields</button>
+                            <button type="submit" class="btn btn-info" value="Kirim">Show Result</button>
+                            <button type="reset" class="btn btn-danger" value="Reset">Reset Fields</button>
                         </form>
                     </div>
                 </div>

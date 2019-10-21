@@ -6,17 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <script src="assets/js/bootstrap.bundle.js"></script>
-        <style>
-            .imgMe {
-                height: 300px;
-                background: #aaa;
-            }
-        </style>
     </head>
-    <body>
+    <body background="img/bg.jpg" style="color:white;"> 
         <header>
             <nav id="webMaps" class="navbar-dark bg-dark" style="padding-left:16px;">
-                <a href="ardananjungkusuma.blogspot.com" target="_blank" class="navbar-brand">
+                <a href="https://ardananjungkusuma.github.io/" target="_blank" class="navbar-brand">
                     <img src="img/group.png" alt="logo" width="30px" height="30px"> UTS Ardan
                 </a>
             </nav>
@@ -57,7 +51,7 @@
                             echo "Message : ".$message."<br>";
                             echo "Email : ".$email."<br>";
                         ?><br>
-                        <a href="no1.html"><button>Back To Serice Menu</button></a>
+                        <a href="no1.html"><button class="btn btn-success">Back To Serice Menu</button></a>
                     </div>
                 </div>
             </div>

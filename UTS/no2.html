@@ -7,17 +7,61 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <script src="assets/js/bootstrap.bundle.js"></script>
         <script src="jquery-3.4.1.js"></script>
-        <style>
-            .imgMe {
-                height: 300px;
-                background: #aaa;
-            }
-        </style>
+        <script>
+                $(document).ready(function(){
+                    var nomor=0,jenis_barang, nama_barang, harga_satuan, jumlah_beli, total, sum = 0, sub_total = 0, diskon = 0, grand_total = 0, bayar = 0;
+                    $(".add-row").click(function(){
+                        nomor = nomor + 1;
+                        jenis_barang = $("#jenis_barang").val();
+                        nama_barang = $("#nama_barang").val();
+                        harga_satuan = $("#harga_satuan").val();
+                        jumlah_beli = $("#jumlah_beli").val();
+                        total = harga_satuan * jumlah_beli;
+                        sum += total;
+                        $("#sub_total").text(": " + sum);
+                        if(sum >= 645000){
+                            diskon = 1 - 0.35;
+                            $("#diskon").text(": 35%");
+                        } else if(sum >= 430000){
+                            diskon = 1 - 0.25;
+                            $("#diskon").text(": 25%")
+                        } else if(sum >= 257000){
+                            diskon = 1 - 0.15;
+                            $("#diskon").text(": 15%")
+                        } else {
+                            diskon = 1
+                            $("#diskon").text(": -");
+                        }
+                        if(diskon != 0){
+                            grand_total = sum * diskon;
+                            $("#grand_total").text(": " + grand_total);
+                        }
+                        var markup = "<tr><td><input type='checkbox' name = 'record'></td><td>"+nomor+"</td>" + "</td><td>" + jenis_barang + "</td><td>" + nama_barang + "</td><td>" + harga_satuan + "</td><td>" + jumlah_beli + "</td><td>" + total + "</td><tr>"
+                            $(".data tbody").append(markup);
+                        });
+                        $("#submit").click(function(){
+                            bayar = $("#bayar").val();
+                            if(bayar>=grand_total){
+                                alert("Uang kembalian: " + (bayar-grand_total));
+                                alert("Terima Kasih sudah berbelanja di Arcake Store");
+                            } else {
+                                alert("Maaf uang Anda tidak mencukupi!");
+                            }
+                        });
+                    $(".delete-row").click(function(){
+                        $("table tbody").find('input[name="record"]').each(function(){
+                            if($(this).is(":checked")){
+                                $(this).parents("tr").remove();
+                            }
+                    });
+                });
+            });
+        </script>
     </head>
     <body>
         <header>
             <nav id="webMaps" class="navbar-dark bg-dark" style="padding-left:16px;">
-                <a href="ardananjungkusuma.blogspot.com" target="_blank" class="navbar-brand">
+                <a href="https://ardananjungkusuma.github.io/" target="_blank" class="navbar-brand">
                     <img src="img/group.png" alt="logo" width="30px" height="30px"> UTS Ardan
                 </a>
             </nav>
@@ -43,18 +87,20 @@
                     <div class="col-lg-12">
                             <center><p><font size = 5><strong>Ardan Cake Shop</strong></font></p></center><hr>
                             <form>
-                                <input type="text" id="jenis_barang" placeholder="Jenis Barang">
-                                <input type="text" id="nama_barang" placeholder="Nama Barang">
+                                <input type="text" id="jenis_barang" placeholder="Jenis Roti">
+                                <input type="text" id="nama_barang" placeholder="Nama Roti">
                                 <input type="number" id="harga_satuan" placeholder="Harga Satuan">
                                 <input type="number" id="jumlah_beli" placeholder="Jumlah Beli">
                                 <input type="button" class="add-row" value="Tambahkan Barang">
+                                <button type="button" class="delete-row" value="Delete Row">Delete</button>
                             </form>
                             <hr>
-                            <p><font size = 5><strong>Form Pembelian</strong></font></p>
+                            <center><p><font size = 5><strong>Tabel Pembelian</strong></font></p>
                             
-                            <table class="data" border="1">
+                            <table class="data" border="1" style="font-family: Georgia, 'Times New Roman', Times, serif; padding: 100px;" >
                                 <thead>
                                     <tr>
+                                        <th>Select</th>
                                         <th>No</th>
                                         <th>Jenis Roti</th>
                                         <th>Nama Roti</th>
@@ -65,7 +111,7 @@
                                 </thead>
                                 <tbody>
                                 </tbody>
-                            </table><hr>
+                            </table><hr></center>
                             
                             <table>
                                 <tr>
@@ -85,52 +131,9 @@
                                     <td>: <input type="number" id="bayar"></td>
                                 </tr>
                             </table>
-                            
-                            <input type="submit" value="Submit" id="submit">
-                            <button onclick="window.location.href='Soal2.html'">Batal</button>
-                            
-                            <script>
-                                $(document).ready(function(){
-                                    var jenis_barang, nama_barang, harga_satuan, jumlah_beli, total, sum = 0, sub_total = 0, diskon = 0, grand_total = 0, bayar = 0;
-                                    $(".add-row").click(function(){
-                                        jenis_barang = $("#jenis_barang").val();
-                                        nama_barang = $("#nama_barang").val();
-                                        harga_satuan = $("#harga_satuan").val();
-                                        jumlah_beli = $("#jumlah_beli").val();
-                                        total = harga_satuan * jumlah_beli;
-                                        sum += total;
-                                        $("#sub_total").text(": " + sum);
-                                        if(sum >= 640000){
-                                            diskon = 1 - 0.35;
-                                            $("#diskon").text(": 35%");
-                                        } else if(sum >= 439000){
-                                            diskon = 1 - 0.21;
-                                            $("#diskon").text(": 21%")
-                                        } else if(sum >= 252000){
-                                            diskon = 1 - 0.11;
-                                            $("#diskon").text(": 11%")
-                                        } else {
-                                            diskon = 1
-                                            $("#diskon").text(": -");
-                                        }
-                                        if(diskon != 0){
-                                            grand_total = sum * diskon;
-                                            $("#grand_total").text(": " + grand_total);
-                                        }
-                                        var markup = "<tr><td>" + "</td><td>" + jenis_barang + "</td><td>" + nama_barang + "</td><td>" + harga_satuan + "</td><td>" + jumlah_beli + "</td><td>" + total + "</td><tr>"
-                                            $(".data tbody").append(markup);
-                                        });
-                                        $("#submit").click(function(){
-                                            bayar = $("#bayar").val();
-                                            if(bayar>=grand_total){
-                                                alert("Uang kembalian: " + (bayar-grand_total));
-                                                alert("Terima Kasih sudah berbelanja di Arcake Store");
-                                            } else {
-                                                alert("Maaf uang Anda tidak mencukupi!");
-                                            }
-                                        });
-                                    });
-                                </script>
+                            <br><br>
+                            <input type="submit" class="btn btn-primary" value="Submit" id="submit">
+                            <button class="btn btn-danger" onclick="window.location.href='no2.html'">Batal</button>
                     </div>
                 </div>
             </div>

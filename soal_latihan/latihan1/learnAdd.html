@@ -14,8 +14,10 @@
                     var buyQty = $("#buyQty").val();
                     var totalPrice = 0;
                     var totalPrice = unitPrice * buyQty;
+                    var sum = sum + totalPrice;
+                    $(".sub_total").text(": " + sum);
                     var markup = "<tr><td><input type='checkbox' name = 'record'></td><td>"+num+"</td><td>"+itemCategory+"</td><td>"+itemMerk+"</td><td>"+unitPrice+"</td><td>"+buyQty+"</td><td>"+totalPrice+"</td></tr>";
-                    $("table tbody").append(markup);
+                    $(".data tbody").append(markup);
                 });
 
                 //deleting selected rows
@@ -44,7 +46,7 @@
         </div>
         <div id="tableListItem">
             <center>
-                <table id="indexTable">
+                <table id="indexTable" class="data">
                     <thead>
                         <tr>
                             <td>Select</td>
@@ -58,15 +60,17 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="checkbox" name="record"></td>
-                            <td>1</td>
-                            <td>Baju</td>
-                            <td>Cardinal</td>
-                            <td>150000</td>
-                            <td>2</td>
-                            <td>300000</td>
+                            
                         </tr>
                     </tbody>
+                </table>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <td>Sub Total</td>
+                        <td class="sub_total">: </td>
+                    </tr>
                 </table>
             </center>
         </div>       
