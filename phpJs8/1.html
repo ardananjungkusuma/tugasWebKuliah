@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+    <head></head>
+    <body>
+        <script>
+            var umur = prompt("Masukkan Umur Anda : ",0);
+
+            if(umur >=0 && umur <= 5){
+                document.write("Balita");
+            }else if(umur >5 && umur <= 15 ){
+                document.write("Kanak Kanak")
+            }else if(umur >15 && umur <= 25 ){
+                document.write("Remaja")
+            }else if(umur >25 && umur <= 60){
+                document.write("Dewasa")
+            }else if(umur > 60){
+                document.write("Lansia")
+            }else{
+                document.write("Error Age.")
+            }
+        </script>
+    </body>
+</html>
