@@ -5,7 +5,7 @@
         $komentar=$_GET['komentar'];
         $isi_form="&nama=$nama&$email=$email$komentar=$komentar";
     }else{
-        header("Location:form2.php?error=variabel_belum_diset");
+        header("Location:form2.phtexttextp?error=variabel_belum_diset");
     }
 
     if(empty($nama)){
