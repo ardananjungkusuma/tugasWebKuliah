@@ -22,7 +22,7 @@
                                     <a href="array1.php" class="nav-link">No 1</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">No 2</a>
+                                    <a href="rumusIndex.php" class="nav-link">No 2</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="no3.php" class="nav-link">No 3</a>
@@ -42,17 +42,29 @@
                 <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
                     <div class="row">
                         <div class="col-lg-12">
+                            <?php
+                                @$pilihanRumus = $_REQUEST['pilihanRumus'];
+                            ?>
                             <h1>Program Rumus</h1>
                             <ul>
                                 <li style="list-style-type: none;">a. Volume Balok</li>
                                 <li style="list-style-type: none;">b. Volume Kubus</li>
                                 <li style="list-style-type: none;">c. Volume Bola</li>
                             </ol>
-                            <form method="POST" action="resrumus1.php">
-                                Masukkan Pilihan (Huruf): <input type="text" placeholder="a" name="pilihanRumus" required>
+                            <form method="GET">
+                                Masukkan Pilihan (Huruf): <input type="text" name="pilihanRumus" required>
                                 <button type="submit" class="btn btn-info" value="Kirim">Submit</button>
                                 <button type="reset" class="btn btn-danger" value="Reset">Reset Fields</button>
                             </form>
+                            <?php 
+                            if($pilihanRumus == "a"){
+                                echo "<a href='Balok.php'>Click Here to Count Volume Balok</a>";
+                            }else if($pilihanRumus == "b"){
+                                echo "<a href='Kubus.php'>Click Here to Count Volume Kubus</a>";
+                            }else if($pilihanRumus == "c"){
+                                echo "<a href='Bola.php'>Click Here to Count Volume Bola</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

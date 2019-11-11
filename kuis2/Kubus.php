@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head><title>No 4</title>
+    <head><title>No 2</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <script src="assets/js/bootstrap.bundle.js"></script>
         </style>
@@ -42,17 +41,25 @@
                 <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
                     <div class="row">
                         <div class="col-lg-12">
-                        <h3>Riwayat Pendidikan</h3>
-                        <?php
-                        $myFile = "text/pendidikan.txt";
-                        echo ("File size : ");
-                        echo filesize("text/pendidikan.txt");
-                        echo (" Bytes<br>");
-                        $fh = fopen($myFile, 'r');
-                        $theData = fread($fh, filesize($myFile));
-                        fclose($fh);
-                        echo "$theData";
+                        <?php 
+                            $sisi = $_GET['sisi'];
+                            $volume = $sisi * $sisi * $sisi;
                         ?>
+                        <form method="GET">
+                        <table>
+                            <tr>
+                                <td>sisi</td>
+                                <td>=</td>
+                                <td><input type="text" name="sisi" value="<?php echo $sisi; ?>"/>cm<br/></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <button type="submit" class="btn btn-info" value="Calculate">Calculate</button><br/><br/>
+                        <?php
+                            echo "Volume Kubus = ".$volume." <br/>";
+                            echo "Ulangi? <a href='Kubus.php'>Y</a> / <a href='rumusIndex.php'>N</a>";
+                        ?>
+                        </form>
                         </div>
                     </div>
                 </div>

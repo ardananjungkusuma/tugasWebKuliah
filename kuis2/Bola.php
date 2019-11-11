@@ -22,7 +22,7 @@
                                     <a href="array1.php" class="nav-link">No 1</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">No 2</a>
+                                    <a href="rumusIndex.php" class="nav-link">No 2</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="no3.php" class="nav-link">No 3</a>
@@ -41,21 +41,25 @@
                 <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
                     <div class="row">
                         <div class="col-lg-12">
+                        <?php 
+                            @$jari_jari = $_REQUEST['jari-jari'];
+                            $volume = 4/3 * 22/7 * $jari_jari * $jari_jari * $jari_jari;
+                        ?>
+                        <form method="GET">
+                        <table>
+                            <tr>
+                                <td>Jari Jari: </td>
+                                <td>=</td>
+                                <td><input type="text" name="jari-jari" value="<?php echo $jari_jari; ?>"/>cm<br/></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <button type="submit" class="btn btn-info" value="Calculate">Calculate</button><br/><br/>
                         <?php
-                            function balok($panjang,$lebar,$tinggi){
-                                $hasil=$panjang*$lebar*$tinggi;
-                                echo "Hasilnya ".$hasil;
-                            }
-                            $pilihanRumus = $_POST['pilihanRumus'];
-                            if($pilihanRumus == "a"){
-                                echo "<input type="text">";
-                            }else if($pilihanRumus == "b"){
-                                echo "b";
-                            }else if($pilihanRumus == "c"){
-                                echo "bola";
-                            }
-                        ?><br>
-                        </div>
+                            echo "Volume Bola = ".$volume." <br/>";
+                            echo "Ulangi? <a href='Bola.php'>Y</a> / <a href='rumusIndex.php'>N</a>";
+                        ?>
+                        </form>
                     </div>
                 </div>
             </main>   

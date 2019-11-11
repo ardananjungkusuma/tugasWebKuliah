@@ -22,7 +22,7 @@
                                     <a href="array1.php" class="nav-link">No 1</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">No 2</a>
+                                    <a href="rumusIndex.php" class="nav-link">No 2</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="no3.php" class="nav-link">No 3</a>
@@ -83,7 +83,10 @@
                                 <ul>
                                     <li>Mematuhi dan mentaati Anggaran Dasar, Anggaran Rumah Tangga dan Peraturan Organisasi</li>
                                     <li>Membela dan menunjang tinggi nama baik organisasi</li>
+                                    <li>Membayar uang iuran Rp.5000/Bulan</li>
                                 </ul>
+                                <br>
+                                Tertanda Admin Website
                             </p>
                             </div>
                         </div>
