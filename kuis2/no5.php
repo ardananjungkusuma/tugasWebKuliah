@@ -52,25 +52,25 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="alamat">No Pekerja:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="alamat" name="alamat" required>
+                                        <input type="number" class="form-control" id="alamat" name="alamat" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="noTelpHP">No Telepon HP:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="noTelpHP" name="noTelpHP" required>
+                                        <input type="number" class="form-control" id="noTelpHP" name="noTelpHP" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="noTelpRumah">No Telepon Rumah:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="noTelpRumah" name="noTelpRumah">
+                                        <input type="number" class="form-control" id="noTelpRumah" name="noTelpRumah">
                                     </div>
                                 </div>		
                                 <div class="form-group">
                                     <label class="control-label col-sm-2" for="noTelpKantor">No Telepon Kantor:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="noTelpKantor" name="noTelpKantor">
+                                        <input type="number" class="form-control" id="noTelpKantor" name="noTelpKantor">
                                     </div>
                                 </div>
                                 <div class="form-group">

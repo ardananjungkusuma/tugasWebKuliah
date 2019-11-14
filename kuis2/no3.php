@@ -42,11 +42,13 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1>Login</h1>
-                                Email: <input type="text" placeholder="ardan@gmail.com" name="email" type="email" required>
-                                Password: <input type="password" placeholder="blabla" name="password" type="password" required><br>
+                            <!-- Fix submit -->
+                                <form action="isi3.php" method="POST"></form>
+                                Email: <input placeholder="ardan@gmail.com" name="email" type="email" required>
+                                Password: <input placeholder="blabla" name="password" type="password" required><br><br>
                                 <input type="checkbox">Save My Email and Password<br>
                                 Already Registered? Login Here<br><br>
-                                <a href="isi3.php"><button type="submit" class="btn btn-info" value="Kirim">Continue</button></a>
+                                <button type="submit" class="btn btn-info" value="Kirim">Continue</button>
                                 <button type="reset" class="btn btn-danger" value="Reset">Reset</button>
                         </div>
                     </div>

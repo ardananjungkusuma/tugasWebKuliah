@@ -42,60 +42,60 @@
                 <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
                     <div class="row">
                         <div class="col-lg-12">
-        <h2>Multidimensional Array</h2>
-        <table>
-            <tr>
-                <th>No</th>
-                <th>Pembeli</th>
-                <th>Barang</th>
-                <th>Tanggal</th>
-                <th>Harga</th>
-            </tr>
-        <?php
-            $Pembeli = array(
-                array("1","Anton","Televisi","07 September 2016","2.500.000"),
-                array("2","Bryan","Mesin Cuci","10 Juli 2016","1.500.000"),
-                array("3","Cherly","Dispenser","","950.000"),
-                array("4","Dean","Kulkas","15 September 2016","1.750.000"),
-                array("5","Esryl","","11 Oktober 2016","450.000")
-            );
-            echo "<tr>";
-                echo"<td>".$Pembeli[0][0]."</td>";
-                echo"<td>".$Pembeli[0][1]."</td>";
-                echo"<td>".$Pembeli[0][2]."</td>";
-                echo"<td>".$Pembeli[0][3]."</td>";
-                echo"<td>".$Pembeli[0][4]."</td>";
-            echo "</tr>";
-            echo "<tr>";
-                echo"<td>".$Pembeli[1][0]."</td>";
-                echo"<td>".$Pembeli[1][1]."</td>";
-                echo"<td>".$Pembeli[1][2]."</td>";
-                echo"<td>".$Pembeli[1][3]."</td>";
-                echo"<td>".$Pembeli[1][4]."</td>";
-            echo "</tr>";
-            echo "<tr>";
-                echo"<td>".$Pembeli[2][0]."</td>";
-                echo"<td>".$Pembeli[2][1]."</td>";
-                echo"<td>".$Pembeli[2][2]."</td>";
-                echo"<td>".$Pembeli[2][3]."</td>";
-                echo"<td>".$Pembeli[2][4]."</td>";
-            echo "</tr>";
-            echo "<tr>";
-                echo"<td>".$Pembeli[3][0]."</td>";
-                echo"<td>".$Pembeli[3][1]."</td>";
-                echo"<td>".$Pembeli[3][2]."</td>";
-                echo"<td>".$Pembeli[3][3]."</td>";
-                echo"<td>".$Pembeli[3][4]."</td>";
-            echo "</tr>";
-            echo "<tr>";
-                echo"<td>".$Pembeli[4][0]."</td>";
-                echo"<td>".$Pembeli[4][1]."</td>";
-                echo"<td>".$Pembeli[4][2]."</td>";
-                echo"<td>".$Pembeli[4][3]."</td>";
-                echo"<td>".$Pembeli[4][4]."</td>";
-            echo "</tr>";
-        ?>
- </div>
+                            <h2>Multidimensional Array</h2>
+                            <table>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Pembeli</th>
+                                    <th>Barang</th>
+                                    <th>Tanggal</th>
+                                    <th>Harga</th>
+                                </tr>
+                            <?php
+                                $Pembeli = array(
+                                    array("1","Anton","Televisi","07 September 2016","2.500.000"),
+                                    array("2","Bryan","Mesin Cuci","10 Juli 2016","1.500.000"),
+                                    array("3","Cherly","Dispenser","","950.000"),
+                                    array("4","Dean","Kulkas","15 September 2016","1.750.000"),
+                                    array("5","","","11 Oktober 2016","450.000")
+                                );
+                                echo "<tr>";
+                                    echo"<td>".$Pembeli[0][0]."</td>";
+                                    echo"<td>".$Pembeli[0][1]."</td>";
+                                    echo"<td>".$Pembeli[0][2]."</td>";
+                                    echo"<td>".$Pembeli[0][3]."</td>";
+                                    echo"<td>".$Pembeli[0][4]."</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo"<td>".$Pembeli[1][0]."</td>";
+                                    echo"<td>".$Pembeli[1][1]."</td>";
+                                    echo"<td>".$Pembeli[1][2]."</td>";
+                                    echo"<td>".$Pembeli[1][3]."</td>";
+                                    echo"<td>".$Pembeli[1][4]."</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo"<td>".$Pembeli[2][0]."</td>";
+                                    echo"<td>".$Pembeli[2][1]."</td>";
+                                    echo"<td>".$Pembeli[2][2]."</td>";
+                                    echo"<td>".$Pembeli[2][3]."</td>";
+                                    echo"<td>".$Pembeli[2][4]."</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo"<td>".$Pembeli[3][0]."</td>";
+                                    echo"<td>".$Pembeli[3][1]."</td>";
+                                    echo"<td>".$Pembeli[3][2]."</td>";
+                                    echo"<td>".$Pembeli[3][3]."</td>";
+                                    echo"<td>".$Pembeli[3][4]."</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo"<td>".$Pembeli[4][0]."</td>";
+                                    echo"<td>".$Pembeli[4][1]."</td>";
+                                    echo"<td>".$Pembeli[4][2]."</td>";
+                                    echo"<td>".$Pembeli[4][3]."</td>";
+                                    echo"<td>".$Pembeli[4][4]."</td>";
+                                echo "</tr>";
+                            ?>
+                    </div>
                     </div>
                 </div>
             </main>   

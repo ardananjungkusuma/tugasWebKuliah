@@ -59,7 +59,6 @@
                                 $_FILES['uploadedfile']['name']);
 
                             if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'],$target_path)){
-                                // echo "The File ".basename($_FILES['uploadedfile']['name'])." has been uploaded";
                                 $image = $_FILES["uploadedfile"]["name"]; 
                                 $img = "text/".$image;
                                 echo "<center><img style='width:200px;height:300px;border:1px solid black;' src=\"$img\"><br><br></center>";
