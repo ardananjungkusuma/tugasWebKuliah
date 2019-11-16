@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head><title>No 3</title>
+        <style>
+            th,td{
+                padding : 10px;
+            }
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -43,19 +48,49 @@
                         <div class="col-lg-12">
                             <h1>Create Account Register</h1>
                             <form method="POST" action="resIsi3.php">
-                                Your Name: <input type="text" placeholder="ardan anjung" name="name" required><br><br>
-                                Email ID: <input type="text" placeholder="ardananjung@gmail.com" name="email" type="email" required><br><br>
-                                Alternate Email ID: <input type="text" placeholder="ardan@gmail.com" name="email2"><br><br>
-                                Your Phone: <input type="text" placeholder="Country Code" name="countryCode"><input type="text" placeholder="City Code" name="cityCode"><input type="text" placeholder="Phone Number" name="phoneNumber"><br><br>
-                                Mobile Phone: <input type="text" placeholder="085258967800" name="mobilePhoneNumber"><br><br>
-                                Your Postal Address : <textarea style="height: 40px;" name="postalAddress"></textarea><br><br>
-                                Country : <select id = "myList" name="myList">
+                            <table>
+                                <tr>
+                                    <td>Your Name : </td>
+                                    <td><input type="text" placeholder="Ardan Anjung" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Email ID : </td>
+                                    <td><input type="email" placeholder="ardananjung@gmail.com" name="email" type="email" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Alternate Email ID : </td>
+                                    <td><input type="email" placeholder="ardan@gmail.com" name="email2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Your Phone : </td>
+                                    <td><input type="number" placeholder="Country Code" required name="countryCode"><input type="number" required placeholder="City Code" name="cityCode"><input type="number" required placeholder="Phone Number" name="phoneNumber"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile Phone : </td>
+                                    <td><input type="number" placeholder="085258967800" name="mobilePhoneNumber" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Your Postal Address : </td>
+                                    <td><textarea style="height: 60px; width: 280px;" name="postalAddress"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Country : </td>
+                                    <td><select id = "myList" name="myList">
                                         <option value = "indonesia">Indonesia</option>
                                         <option value = "usa">USA</option>
                                         <option value = "russia">Russia</option>
-                                </select><br><br>
-                                Password: <input type="password" placeholder="blabla" name="password" type="password" required><br><br>
-                                Re-Enter Password: <input type="password" placeholder="blabla" name="password2" type="password" required><br><br>
+                                </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Password : </td>
+                                    <td><input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" name="password" type="password" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Re-Enter Password : </td>
+                                    <td><input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" name="password2" type="password" required></td>
+                                </tr>
+                            </table>
+                            <br>
                                 <input type="checkbox">Save My Email and Password<br>
                                 Already Registered? Login Here<br><br>
                                 <button type="submit" class="btn btn-info" value="Kirim">Continue</button>

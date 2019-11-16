@@ -45,18 +45,19 @@
                             @$jari_jari = $_REQUEST['jari-jari'];
                             $volume = 4/3 * 22/7 * $jari_jari * $jari_jari * $jari_jari;
                         ?>
+                        <h2>Menghitung Volume Bola</h2>
                         <form method="GET">
                         <table>
                             <tr>
                                 <td>Jari Jari: </td>
                                 <td>=</td>
-                                <td><input type="text" name="jari-jari" value="<?php echo $jari_jari; ?>"/>cm<br/></td>
+                                <td><input type="number" required name="jari-jari" value="<?php echo $jari_jari; ?>"/>cm<br/></td>
                             </tr>
                         </table>
                         <br>
                         <button type="submit" class="btn btn-info" value="Calculate">Calculate</button><br/><br/>
                         <?php
-                            echo "Volume Bola = ".$volume." <br/>";
+                            echo "Volume Bola = ".$volume." cm³ <br/>";
                             echo "Ulangi? <a href='Bola.php'>Y</a> / <a href='rumusIndex.php'>N</a>";
                         ?>
                         </form>

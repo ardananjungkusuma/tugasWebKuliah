@@ -43,13 +43,14 @@
                         <div class="col-lg-12">
                             <h1>Login</h1>
                             <!-- Fix submit -->
-                                <form action="isi3.php" method="POST"></form>
-                                Email: <input placeholder="ardan@gmail.com" name="email" type="email" required>
-                                Password: <input placeholder="blabla" name="password" type="password" required><br><br>
+                                <form method="POST" action="isi3.php">
+                                Email: <input placeholder="ardan@gmail.com" required name="email" type="email">
+                                Password: <input placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required name="password" type="password"><br>
                                 <input type="checkbox">Save My Email and Password<br>
-                                Already Registered? Login Here<br><br>
+                                Not Registered? Register <a href="no5.php" style="text-decoration:none;">Here</a><br><br>
                                 <button type="submit" class="btn btn-info" value="Kirim">Continue</button>
                                 <button type="reset" class="btn btn-danger" value="Reset">Reset</button>
+                                </form>
                         </div>
                     </div>
                 </div>

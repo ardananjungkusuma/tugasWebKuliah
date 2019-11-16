@@ -42,21 +42,22 @@
                     <div class="row">
                         <div class="col-lg-12">
                         <?php 
-                            $sisi = $_GET['sisi'];
+                            @$sisi = $_GET['sisi'];
                             $volume = $sisi * $sisi * $sisi;
                         ?>
                         <form method="GET">
+                        <h2>Menghitung Volume Kubus</h2>
                         <table>
                             <tr>
-                                <td>sisi</td>
+                                <td>Sisi</td>
                                 <td>=</td>
-                                <td><input type="text" name="sisi" value="<?php echo $sisi; ?>"/>cm<br/></td>
+                                <td><input type="number" required name="sisi" value="<?php echo $sisi; ?>"/>cm<br/></td>
                             </tr>
                         </table>
                         <br>
                         <button type="submit" class="btn btn-info" value="Calculate">Calculate</button><br/><br/>
                         <?php
-                            echo "Volume Kubus = ".$volume." <br/>";
+                            echo "Volume Kubus = ".$volume." cm³ <br/>";
                             echo "Ulangi? <a href='Kubus.php'>Y</a> / <a href='rumusIndex.php'>N</a>";
                         ?>
                         </form>

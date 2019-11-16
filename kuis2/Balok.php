@@ -47,28 +47,29 @@
                             @$tinggi = $_GET['tinggi'];
                             $volume = $panjang * $lebar * $tinggi;
                         ?>
+                        <h2>Menghitung Volume Balok</h2>
                         <form method="GET">
                         <table>
                             <tr>
                                 <td>Panjang</td>
                                 <td>=</td>
-                                <td><input type="text" name="panjang" value="<?php echo $panjang; ?>"/>cm<br/></td>
+                                <td><input type="number" name="panjang" required value="<?php echo $panjang; ?>"/>cm<br/></td>
                             </tr>
                             <tr>
                                 <td>Lebar</td>
                                 <td>=</td>
-                                <td><input type="text" name="lebar" value="<?php echo $lebar; ?>"/>cm<br/></td>
+                                <td><input type="number" name="lebar" required value="<?php echo $lebar; ?>"/>cm<br/></td>
                             </tr>
                             <tr>
                                 <td>Tinggi</td>
                                 <td>=</td>
-                                <td><input type="text" name="tinggi" value="<?php echo $tinggi; ?>"/>cm<br/></td>
+                                <td><input type="number" name="tinggi" required value="<?php echo $tinggi; ?>"/>cm<br/></td>
                             </tr>
                         </table>
                         <br>
                         <button type="submit" class="btn btn-info" value="Calculate">Calculate</button><br/><br/>
                         <?php
-                            echo "Volume Balok = ".$volume." <br/>";
+                            echo "Volume Balok = ".$volume." cm³ <br/>";
                             echo "Ulangi? <a href='Balok.php'>Y</a> / <a href='rumusIndex.php'>N</a>";
                         ?>
                         </form>
