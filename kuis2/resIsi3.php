@@ -65,16 +65,16 @@
                                 <hr>
                             </h2>
                         </center><br>
-                        <h4>Nama : <?php echo $name ?></h4>
-                        <h4>Email : <?php echo $email ?></h4>
-                        <h4>Alternate Email : <?php echo $email2 ?></h4>
-                        <h4>Country Code : <?php echo $countryCode ?></h4>
-                        <h4>City Code : <?php echo $cityCode ?></h4>
-                        <h4>Phone Number : <?php echo $phoneNumber ?></h4>
-                        <h4>Mobile Phone Number : <?php echo $mobilePhoneNumber ?></h4>
-                        <h4>Postal Address : <?php echo $postalAddress ?></h4>
-                        <h4>Country : <?php echo $myList ?></h4>
-                        <h4>Password : <?php echo $password ?></h4>
+                        <h5>Nama : <?php echo $name ?></h5>
+                        <h5>Email : <?php echo $email ?></h5>
+                        <h5>Alternate Email : <?php echo $email2 ?></h5>
+                        <h5>Country Code : <?php echo $countryCode ?></h5>
+                        <h5>City Code : <?php echo $cityCode ?></h5>
+                        <h5>Phone Number : <?php echo $phoneNumber ?></h5>
+                        <h5>Mobile Phone Number : <?php echo $mobilePhoneNumber ?></h5>
+                        <h5>Postal Address : <?php echo $postalAddress ?></h5>
+                        <h5>Country : <?php echo $myList ?></h5>
+                        <h5>Password : <?php echo $password ?></h5>
                     <?php
                     } else {
                         echo "<h1 style='color:red;'>Maaf anda harus mengakses halaman ini dari No 3</h1>";
