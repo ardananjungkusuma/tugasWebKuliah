@@ -59,12 +59,10 @@
 
                                         <table>
                                             <tr class="kolom">
-                                                <td class="kolom">Email</td>
-                                                <td class="kolom"><input placeholder="ardan@gmail.com" required name="email" type="email"></td>
+                                                <td class="kolom"><input style="width:250px;" placeholder="Email" required name="email" type="email"></td>
                                             </tr>
                                             <tr class="kolom">
-                                                <td class="kolom">Password</td>
-                                                <td class="kolom"><input placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required name="password" type="password"></td>
+                                                <td class="kolom"><input style="width:250px;" placeholder="Password" required name="password" type="password"></td>
                                             </tr>
                                         </table><br>
                                         <table>
