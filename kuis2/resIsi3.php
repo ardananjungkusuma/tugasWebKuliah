@@ -8,10 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <script src="assets/js/bootstrap.bundle.js"></script>
+    <style>
+        h5 {
+            text-align: left;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid white;
+            margin: 1em 0;
+            padding: 0;
+        }
     </style>
 </head>
 
-<body>
+<body background="img/bg.jpg">
     <header>
         <nav id="webMaps" class="navbar-dark bg-dark" style="padding-left:16px;">
             <a href="https://ardananjungkusuma.github.io/" target="_blank" class="navbar-brand">
@@ -61,20 +74,29 @@
                             $password2 = $_POST['password2'];
                             ?>
                         <center>
-                            <h2><b>Information User</b>
+                            <h2 style="color:white"><b>Information User</b>
                                 <hr>
                             </h2>
-                        </center><br>
-                        <h5>Nama : <?php echo $name ?></h5>
-                        <h5>Email : <?php echo $email ?></h5>
-                        <h5>Alternate Email : <?php echo $email2 ?></h5>
-                        <h5>Country Code : <?php echo $countryCode ?></h5>
-                        <h5>City Code : <?php echo $cityCode ?></h5>
-                        <h5>Phone Number : <?php echo $phoneNumber ?></h5>
-                        <h5>Mobile Phone Number : <?php echo $mobilePhoneNumber ?></h5>
-                        <h5>Postal Address : <?php echo $postalAddress ?></h5>
-                        <h5>Country : <?php echo $myList ?></h5>
-                        <h5>Password : <?php echo $password ?></h5>
+                        </center>
+                        <center>
+                            <div class="card" style="width: 50rem;">
+                                <img class="card-img-top" style="width:100px; height:100px; padding:13px;" src="img/login-ardan.png" alt="ardan_login">
+                                <div class="card-body" style="padding: 10px;">
+                                    <p class="card-text">
+                                        <h5>Nama : <?php echo $name ?></h5>
+                                        <h5>Email : <?php echo $email ?></h5>
+                                        <h5>Alternate Email : <?php echo $email2 ?></h5>
+                                        <h5>Country Code : <?php echo $countryCode ?></h5>
+                                        <h5>City Code : <?php echo $cityCode ?></h5>
+                                        <h5>Phone Number : <?php echo $phoneNumber ?></h5>
+                                        <h5>Mobile Phone Number : <?php echo $mobilePhoneNumber ?></h5>
+                                        <h5>Postal Address : <?php echo $postalAddress ?></h5>
+                                        <h5>Country : <?php echo $myList ?></h5>
+                                        <h5>Password : <?php echo $password ?></h5>
+                                    </p>
+                                </div>
+                            </div>
+                        </center>
                     <?php
                     } else {
                         echo "<h1 style='color:red;'>Maaf anda harus mengakses halaman ini dari No 3</h1>";
