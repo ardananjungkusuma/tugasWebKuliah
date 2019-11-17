@@ -6,7 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <script src="assets/js/bootstrap.bundle.js"></script>
-        </style>
     </head>
     <body>
         <header>
@@ -44,6 +43,12 @@
                 <div class="container" style="padding: 20px; margin: 10 px auto; margin-left: auto; margin-right: auto;">
                     <div class="row">
                         <div class="col-lg-12">
+                        <center><h2>SERIKAT PEKERJA FORUM KOMUNIKASI PEKERJA</h2>
+                        <h2>JASA PENUNJANG MIGAS DI PT.BADAK</h2>
+                        <h2>(SP-FKPPM)</h2><br>
+                        Jl. Hasanuddin Gg. Obsidian RT 27 No. 27 Berebas Tengah Bontang Selatan <br>
+                        KOTA BONTANG KALIMANTAN TIMUR Telp. 0548-21996, Hp. 081255009493, 081253057093<hr>
+                        </center>
                         <?php
                             $nama = $_POST['nama'];
                             $alamat = $_POST['alamat'];
@@ -53,7 +58,7 @@
                             $unit = $_POST['unit'];
                             $ttl = $_POST['ttl'];
                             $alamat = $_POST['alamat'];
-                            echo "<h2><b>Information User</b><hr></h2><br>";
+                            // echo "<h2><b>Information User</b><hr></h2><br>";
                             $target_path = "text/";
                             $target_path = $target_path . basename(
                                 $_FILES['uploadedfile']['name']);
