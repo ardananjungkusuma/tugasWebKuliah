@@ -105,7 +105,7 @@
                                 echo "There was an error during uploading the file, please try again<br>";
                             }
                             ?>
-                        Hormat Saya, <?php echo $nama ?>
+                        <h5 style="font-style:italic;">Hormat Saya, <?php echo $nama ?></h5>
                     <?php
                     } else {
                         echo "<h1 style='color:red;'>Maaf anda harus mengakses halaman ini dari No 5</h1>";

@@ -61,8 +61,9 @@
                             array("1", "Anton", "Televisi", "07 September 2016", "2.500.000"),
                             array("2", "Bryan", "Mesin Cuci", "10 Juli 2016", "1.500.000"),
                             array("3", "Cherly", "Dispenser", "", "950.000"),
-                            array("4", "Dean", "Kulkas", "15 September 2016", "1.750.000"),
-                            array("5", "", "", "11 Oktober 2016", "450.000")
+                            array("4", "Ardan", "Kulkas2", "29 Saptember 2019", "1.000.000"),
+                            array("5", "Dean", "Kulkas", "15 September 2016", "1.750.000"),
+                            array("6", "Budi", "", "11 Oktober 2016", "450.000")
                         );
                         echo "<tr>";
                         echo "<td>" . $Pembeli[0][0] . "</td>";
@@ -99,7 +100,15 @@
                         echo "<td>" . $Pembeli[4][3] . "</td>";
                         echo "<td>" . $Pembeli[4][4] . "</td>";
                         echo "</tr>";
+                        echo "<tr>";
+                        echo "<td>" . $Pembeli[5][0] . "</td>";
+                        echo "<td>" . $Pembeli[5][1] . "</td>";
+                        echo "<td>" . $Pembeli[5][2] . "</td>";
+                        echo "<td>" . $Pembeli[5][3] . "</td>";
+                        echo "<td>" . $Pembeli[5][4] . "</td>";
+                        echo "</tr>";
                         ?>
+                    </table>
                 </div>
             </div>
         </div>
